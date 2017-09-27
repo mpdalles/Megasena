@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Mega-Sena</h2>
+        <br /><br />
+        <p>
+            Entre com seu nome para prosseguir:
+        </p>
+        <p>
+            @using (Html.BeginForm("Apostar", "Home"))
+            {
+                <input id="nomeApostador" type="text" required width="500" />
+                <p><input type="submit" id="apostar"  value="Apostar"/></p>
+            }
+        </p>
+    </div>    
+</div>

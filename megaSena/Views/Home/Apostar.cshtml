@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Apostar</title>
+    <style>
+        .duplicado {
+            border: 1px solid red;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        <label>Selecione os números:</label>
+        @using (Html.BeginForm("RegistrarAposta", "Home"))
+        {
+            <input type="text" name="numero1" width="5" />
+            <input type="text" name="numero2" width="5" />
+            <input type="text" name="numero3" width="5" />
+            <input type="text" name="numero4" width="5" />
+            <input type="text" name="numero5" width="5" />
+            <input type="text" name="numero6" width="5" />
+            <br />
+            <input type="submit" class="btn-primary" value="Apostar" />
+        }
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    
+    var arr = [];
+    $("input").each(function ()
+    {
+        var value = $(this).val();
+        if (arr.indexOf(value) == -1)
+            arr.push(value);
+        else {
+            $(this).addClass("duplicado");
+            alert("Existem valores duplicados. Verifique!");
+            return false;
+        }
+        
+    });
+    
+</script>
+
