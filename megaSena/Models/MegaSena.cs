@@ -29,9 +29,6 @@ namespace megaSena.Models
             else
                 this.jogoID = ultJogo++;
             
-            this.numerosAposta = new this.numerosAposta;
-
-
             this.dataAposta = DateTime.Now;            
         }
 
